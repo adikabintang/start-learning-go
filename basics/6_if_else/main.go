@@ -19,4 +19,10 @@ func main() {
 	} else {
 		fmt.Println(num, " has multiple digits")
 	}
+
+	name := "ibra"
+
+	if name == "ibra" {
+		fmt.Println("kadabra")
+	}
 }
