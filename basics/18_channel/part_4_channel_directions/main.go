@@ -4,11 +4,13 @@ import (
 	"fmt"
 )
 
-// this function only accepts a channel for sending values
+// variable_name chan<- type is only for receiving
 func ping(pings chan<- string, msg string) {
-	pings <- msg
+	pings <- msg // receive
+	// if we stry to send value to channel pings, it will cause compile error
 }
 
+// variable_name <- chan type is only for sending
 func pong(pings <-chan string, pongs chan<- string) {
 	msg := <-pings
 	pongs <- msg
